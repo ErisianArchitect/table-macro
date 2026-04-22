@@ -1,14 +1,12 @@
 use proc_macro2::TokenStream;
-use quote::{quote, ToTokens};
-use syn::{
-    braced, bracketed, parse::Parse, Attribute, Ident, Token
-};
+use quote::{ToTokens, quote};
+use syn::{Attribute, Ident, Token, braced, bracketed, parse::Parse};
 
 macro_rules! discard {
     ($($_:tt)*) => {};
 }
 
-discard!{
+discard! {
     table!{macro table_name[
         [cols...]
         [...]
@@ -64,11 +62,7 @@ impl Parse for TableInput {
             rows.push(row_content.parse()?);
         }
 
-        Ok(Self {
-            attrs,
-            name,
-            rows,
-        })
+        Ok(Self { attrs, name, rows })
     }
 }
 

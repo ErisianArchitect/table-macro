@@ -13,7 +13,7 @@
 //! ```
 //! This will create a macro like this:
 //! ```rust, ignore
-//! #[doc = "You can also add doc comments and attributes.\n(If you need 
+//! #[doc = "You can also add doc comments and attributes.\n(If you need
 //! #[macro_export]
 //! macro_rules! table_name {
 //!     () => {
@@ -43,7 +43,7 @@
 //! // or
 //! table_name!(foreach(path_to::other_macro));
 //! ```
-//! 
+//!
 //! Table rows can be matched using syntax like so when not using `foreac
 //! ```rust, ignore
 //! $( { $($token:tt)* } )*
@@ -53,8 +53,8 @@
 mod table_input;
 
 use proc_macro::TokenStream;
-use syn::parse_macro_input;
 use quote::quote;
+use syn::parse_macro_input;
 use table_input::TableInput;
 
 /// ```rust, ignore
@@ -101,7 +101,7 @@ use table_input::TableInput;
 /// // or
 /// table_name!(foreach(path_to::other_macro));
 /// ```
-/// 
+///
 /// Table rows can be matched using syntax like so when not using `foreach` mode:
 /// ```rust, ignore
 /// $( { $($token:tt)* } )*
