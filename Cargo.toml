@@ -1,5 +1,9 @@
 [package]
 name = "table-macro"
+description = "A macro to create a table macro."
+authors = ["ErisianArchitect <https://github.com/ErisianArchitect>"]
+repository = "https://github.com/ErisianArchitect/table-macro"
+license = "MIT"
 version = "0.1.0"
 edition = "2024"
 
